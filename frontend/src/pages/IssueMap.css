@@ -1,0 +1,9 @@
+.map-page { display:flex; flex-direction:column; gap:14px; }
+.filter-sel { padding:5px 9px; font-size:.8rem; min-width:120px; }
+.map-legend { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.legend-item { display:flex; align-items:center; gap:5px; font-size:.76rem; color:var(--muted); }
+.legend-dot  { width:13px; height:13px; border-radius:50%; border:2px solid #fff; box-shadow:0 1px 3px rgba(0,0,0,.2); }
+.map-container { overflow:hidden; height:500px; position:relative; padding:0; }
+.map-loading { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; background:var(--chalk); z-index:10; }
+.map-loading p { font-size:.85rem; color:var(--muted); }
+.map-hint { display:flex; align-items:flex-start; gap:9px; padding:11px 14px; font-size:.8rem; color:var(--muted); line-height:1.55; }

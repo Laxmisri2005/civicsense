@@ -1,0 +1,59 @@
+.layout { display:flex; min-height:100vh; }
+
+/* Sidebar */
+.sidebar { width:236px; min-width:236px; background:var(--navy); display:flex; flex-direction:column; position:sticky; top:0; height:100vh; overflow-y:auto; z-index:100; transition:transform .25s; }
+.sidebar-brand { display:flex; align-items:center; gap:9px; padding:20px 18px 16px; font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:#fff; border-bottom:1px solid rgba(255,255,255,.08); letter-spacing:-.02em; }
+.sidebar-nav { flex:1; padding:12px 10px; display:flex; flex-direction:column; gap:2px; }
+
+.nav-link { display:flex; align-items:center; gap:9px; padding:9px 11px; border-radius:8px; color:rgba(255,255,255,.6); font-size:.85rem; font-weight:500; transition:all .14s; }
+.nav-link:hover { background:rgba(255,255,255,.08); color:#fff; }
+.nav-link--active { background:rgba(245,158,11,.18); color:var(--saffron); font-weight:600; }
+.nav-link--danger { color:#fca5a5; }
+.nav-link--danger:hover, .nav-link--danger.nav-link--active { background:rgba(220,38,38,.2); color:#fca5a5; }
+
+.sidebar-user { padding:10px 10px; border-top:1px solid rgba(255,255,255,.08); display:flex; flex-direction:column; gap:4px; }
+.user-card { display:flex; align-items:center; gap:9px; padding:9px 10px; border-radius:8px; color:rgba(255,255,255,.8); transition:background .14s; }
+.user-card:hover { background:rgba(255,255,255,.07); }
+.user-avatar { width:30px; height:30px; border-radius:50%; background:var(--saffron); color:var(--navy); display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-size:.85rem; font-weight:800; flex-shrink:0; }
+.user-info { display:flex; flex-direction:column; min-width:0; }
+.user-name { font-size:.8rem; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.user-role { font-size:.68rem; color:rgba(255,255,255,.35); text-transform:capitalize; }
+.logout-btn { display:flex; align-items:center; gap:6px; padding:6px 10px; border-radius:8px; background:none; color:rgba(255,255,255,.3); font-size:.76rem; transition:all .14s; width:100%; }
+.logout-btn:hover { background:rgba(220,38,38,.18); color:#fca5a5; }
+
+.auth-btns { display:flex; flex-direction:column; gap:6px; }
+.register-btn { display:block; text-align:center; padding:7px 12px; background:var(--saffron); color:var(--navy); border-radius:8px; font-size:.8rem; font-weight:700; transition:background .14s; }
+.register-btn:hover { background:var(--saffron-lt); }
+
+.sidebar-footer { padding:10px 18px; font-size:.68rem; color:rgba(255,255,255,.2); border-top:1px solid rgba(255,255,255,.06); }
+
+/* Main */
+.main-wrap { flex:1; display:flex; flex-direction:column; min-width:0; }
+
+.topbar { background:var(--card); border-bottom:1px solid var(--border); padding:0 20px; height:54px; display:flex; align-items:center; gap:12px; position:sticky; top:0; z-index:50; }
+.menu-btn { background:none; display:none; color:var(--text); padding:4px; border-radius:6px; }
+.menu-btn:hover { background:var(--chalk); }
+.topbar-title { font-family:var(--font-head); font-weight:700; font-size:.95rem; color:var(--navy); flex-shrink:0; display:none; }
+.topbar-right { display:flex; align-items:center; gap:10px; margin-left:auto; flex-shrink:0; }
+
+.topbar-user { display:flex; align-items:center; gap:7px; padding:4px 8px; border-radius:8px; transition:background .12s; }
+.topbar-user:hover { background:var(--chalk); }
+.topbar-avatar { width:26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-size:.75rem; font-weight:800; }
+.topbar-username { font-size:.8rem; font-weight:600; color:var(--navy); }
+
+.topbar-auth { display:flex; align-items:center; gap:8px; }
+.topbar-signin { font-size:.8rem; font-weight:600; color:var(--muted); padding:4px 8px; border-radius:6px; }
+.topbar-signin:hover { color:var(--navy); }
+
+.main-content { flex:1; padding:24px; max-width:1080px; width:100%; margin:0 auto; }
+.overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:99; }
+
+@media(max-width:768px){
+  .sidebar { position:fixed; left:0; top:0; bottom:0; transform:translateX(-100%); }
+  .sidebar--open { transform:translateX(0); }
+  .menu-btn { display:flex; }
+  .topbar-title { display:block; }
+  .overlay { display:block; }
+  .main-content { padding:16px; }
+  .topbar-username { display:none; }
+}

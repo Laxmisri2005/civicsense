@@ -1,0 +1,20 @@
+.issues-page { display:flex; flex-direction:column; gap:18px; }
+.issues-toolbar { display:flex; flex-direction:column; gap:8px; }
+.search-inline { display:flex; align-items:center; gap:8px; background:var(--card); padding:9px 13px; border-radius:8px; border:1px solid var(--border); box-shadow:var(--shadow); }
+.filters-bar { display:flex; align-items:center; gap:7px; padding:9px 13px; flex-wrap:wrap; }
+.filter-sel { padding:5px 9px; font-size:.8rem; min-width:120px; }
+
+/* Issue card */
+.issue-card { display:flex; flex-direction:column; overflow:hidden; transition:transform .17s,box-shadow .17s; }
+.issue-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+.issue-card__img  { width:100%; height:155px; object-fit:cover; }
+.issue-card__body { padding:14px; display:flex; flex-direction:column; gap:7px; flex:1; }
+.issue-card__tags { display:flex; gap:5px; flex-wrap:wrap; }
+.issue-card__title{ font-size:.95rem; font-weight:700; color:var(--navy); line-height:1.3; }
+.issue-card__desc { font-size:.82rem; color:var(--muted); line-height:1.55; flex:1; }
+.issue-card__foot { display:flex; align-items:center; justify-content:space-between; padding-top:9px; border-top:1px solid var(--border); margin-top:auto; }
+.issue-card__loc  { font-size:.73rem; color:var(--muted); display:flex; align-items:center; gap:3px; }
+.issue-card__actions { display:flex; gap:6px; }
+.act-btn { display:flex; align-items:center; gap:3px; font-size:.78rem; color:var(--muted); background:none; border:none; cursor:pointer; padding:3px 7px; border-radius:6px; transition:background .12s; }
+.act-btn:hover { background:var(--chalk); color:var(--navy); }
+.issue-card__meta { font-size:.72rem; color:var(--muted); }

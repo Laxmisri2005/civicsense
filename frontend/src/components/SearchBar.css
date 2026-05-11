@@ -1,0 +1,16 @@
+.search-wrap { position:relative; flex:1; max-width:320px; }
+.search-field { position:relative; display:flex; align-items:center; }
+.search-icon  { position:absolute; left:10px; color:var(--muted); pointer-events:none; flex-shrink:0; }
+.search-input { width:100%; padding:7px 30px 7px 30px; border:1.5px solid var(--border); border-radius:8px; font-size:.83rem; background:var(--chalk); transition:border-color .14s,background .14s; }
+.search-input:focus { outline:none; border-color:var(--navy); background:#fff; }
+.search-x { position:absolute; right:8px; background:none; color:var(--muted); padding:2px; border-radius:4px; display:flex; }
+.search-x:hover { color:var(--navy); }
+.search-drop { position:absolute; top:calc(100% + 6px); left:0; right:0; z-index:200; max-height:360px; overflow-y:auto; box-shadow:var(--shadow-md); animation:slideUp .15s ease; }
+.search-empty { padding:14px; text-align:center; font-size:.82rem; color:var(--muted); }
+.search-group { border-bottom:1px solid var(--border); padding:5px 0; }
+.search-group:last-child { border-bottom:none; }
+.search-group-label { padding:5px 13px 2px; font-size:.68rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.search-result { display:flex; flex-direction:column; align-items:flex-start; width:100%; padding:7px 13px; background:none; text-align:left; transition:background .1s; gap:2px; }
+.search-result:hover { background:var(--chalk); }
+.search-result-title { font-size:.82rem; font-weight:500; color:var(--text); }
+.search-result-meta  { font-size:.7rem; color:var(--muted); }

@@ -1,0 +1,28 @@
+.emergency-page { display:flex; flex-direction:column; gap:16px; }
+.conn-bar { display:flex; align-items:center; gap:9px; padding:9px 14px; border-radius:8px; font-size:.83rem; font-weight:600; }
+.conn-bar--on  { background:var(--green-soft); color:var(--green); }
+.conn-bar--off { background:var(--red-soft);   color:var(--red);   animation:blink 1.8s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.65} }
+@keyframes pulse-anim { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
+.pulse-icon { animation:pulse-anim 1.6s infinite; }
+.queue-banner { display:flex; align-items:center; gap:9px; padding:10px 14px; background:var(--amber-soft); border:1.5px solid var(--saffron); border-radius:8px; font-size:.83rem; font-weight:600; color:#92400e; }
+.sync-msg { padding:9px 13px; border-radius:8px; font-size:.83rem; font-weight:500; }
+.sync-msg--ok  { background:var(--green-soft); color:var(--green); }
+.sync-msg--err { background:var(--red-soft);   color:var(--red); }
+.sos-section { padding:18px 20px; display:flex; flex-direction:column; gap:12px; }
+.sos-section h2 { font-size:.95rem; color:var(--navy); }
+.sos-section p  { font-size:.82rem; color:var(--muted); }
+.sos-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(155px,1fr)); gap:10px; }
+.sos-btn { display:flex; flex-direction:column; gap:5px; padding:13px 12px; border-radius:10px; border:1.5px solid; background:#fff; cursor:pointer; text-align:left; transition:transform .14s,box-shadow .14s; }
+.sos-btn:hover { transform:translateY(-2px); box-shadow:var(--shadow-md); }
+.sos-btn__label { font-family:var(--font-head); font-size:.85rem; font-weight:700; }
+.sos-btn__text  { font-size:.72rem; opacity:.75; line-height:1.4; }
+.queue-item { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:8px 10px; background:var(--chalk); border-radius:7px; font-size:.82rem; }
+.emergency-contacts-box { padding:18px 20px; display:flex; flex-direction:column; gap:12px; background:#fff9f9; border:1.5px solid #fca5a5; }
+.emergency-contacts-box h2 { font-size:.9rem; color:var(--red); }
+.emergency-call-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:7px; }
+.call-chip { display:flex; flex-direction:column; gap:2px; padding:9px 12px; background:var(--card); border:1px solid var(--border); border-radius:8px; transition:all .12s; }
+.call-chip:hover { background:var(--red); border-color:var(--red); }
+.call-chip:hover span, .call-chip:hover strong { color:#fff; }
+.call-chip span   { font-size:.72rem; color:var(--muted); }
+.call-chip strong { font-family:var(--font-head); font-size:.95rem; font-weight:800; color:var(--navy); }

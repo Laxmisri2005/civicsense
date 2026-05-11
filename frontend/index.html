@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f1f3d" />
+    <meta name="description" content="CivicSense — Report civic issues, get disaster alerts, and support your community." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CivicSense" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <title>CivicSense – Community & Disaster Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register Service Worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => {
+              console.log('[PWA] Service worker registered:', reg.scope)
+              // Listen for SW messages (e.g. SOS sync complete)
+              navigator.serviceWorker.addEventListener('message', event => {
+                if (event.data?.type === 'SOS_SYNCED') {
+                  console.log(`[PWA] ${event.data.count} SOS messages synced.`)
+                }
+              })
+            })
+            .catch(err => console.warn('[PWA] SW registration failed:', err))
+        })
+      }
+    </script>
+  </body>
+</html>
