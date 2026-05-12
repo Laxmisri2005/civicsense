@@ -1,4 +1,4 @@
-# ── Python virtual environment ──────────────────────
+# ── Virtual Environments ─────────────────────────────
 venv/
 env/
 .venv/
@@ -6,7 +6,7 @@ ENV/
 env.bak/
 venv.bak/
 
-# ── Python cache ─────────────────────────────────────
+# ── Python Cache ─────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
@@ -15,7 +15,7 @@ __pycache__/
 *.pyd
 .Python
 
-# ── Distribution / packaging ─────────────────────────
+# ── Build / Distribution ─────────────────────────────
 build/
 dist/
 *.egg-info/
@@ -30,27 +30,31 @@ htmlcov/
 coverage.xml
 *.cover
 
-# ── Flask / SQLAlchemy ───────────────────────────────
+# ── Flask / Database ─────────────────────────────────
 instance/
 *.db
 *.sqlite
 *.sqlite3
 
-# ── Environment / secrets ────────────────────────────
+# ── Environment / Secrets (VERY IMPORTANT) ───────────
 .env
-.env.local
-.env.production
+.env.*
 secrets.json
 
-# ── Uploads (user content — don't commit) ───────────
-uploads/*
+# ── Uploads (user-generated files) ───────────────────
+uploads/
 !uploads/.gitkeep
 
 # ── Logs ─────────────────────────────────────────────
 *.log
 logs/
 
-# ── IDE ──────────────────────────────────────────────
+# ── IDE / Editors ────────────────────────────────────
 .vscode/
 .idea/
 *.swp
+*.swo
+
+# ── OS Files ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
