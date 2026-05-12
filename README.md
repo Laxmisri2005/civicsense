@@ -4,7 +4,7 @@
 
 ### 🎬 Click the image to watch the demo
 
-[![CivicSense](YOUR_IMAGE_URL_HERE)](https://youtu.be/k1xlRCVUKa8?si=nvaFi0ly4y7rlQDV)
+[![CivicSense](https://github.com/Laxmisri2005/civicsense/blob/02d5d8f90ccfed94897adb326c27aea07c87ee85/civicsense.png)](https://youtu.be/k1xlRCVUKa8?si=nvaFi0ly4y7rlQDV)
 
 </div>
 
